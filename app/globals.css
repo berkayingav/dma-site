@@ -1,4 +1,4 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 
 :root {
   --background: #ffffff;
@@ -17,6 +17,26 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+}
+
+/* Mevcut style bloğunun içine ekle */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+    /* Yarısı kadar kaydırıp başa sarar */
+}
+
+.animate-scroll {
+    animation: scroll 30s linear infinite;
+}
+
+.hover\:animate-pause:hover {
+    animation-play-state: paused;
 }
 
 body {
